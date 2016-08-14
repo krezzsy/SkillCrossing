@@ -162,18 +162,7 @@
 												<ul class="l2">
 														<li class="item490 first"><a
 															href="Controller?command=search">${find_spec}</a>
-														<div class="search-box">
-																<form action="Controller" method="post">
-																	<input type="hidden" name="command" value="search" />
-																	<input type="text" name="key" value=""
-																		style="width: 110px" placeholder="${speciality }..."
-																		required="">
-																	<button type="submit" class="btn-sm btn-danger"
-																		style="font-size: 17px;">
-																		<i class="fa fa-search"></i>
-																	</button>
-																</form>
-															</div></li>
+														</li>
 														<li class="item492"><a
 															href="#">${cooperation }</a></li>
 														<li class="item467"><a
