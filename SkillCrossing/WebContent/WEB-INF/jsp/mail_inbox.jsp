@@ -222,18 +222,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<ul class="l2">
 														<li class="item490 first"><a
 															href="Controller?command=search">${find_spec}</a>
-														<div class="search-box">
-																<form action="Controller" method="post">
-																	<input type="hidden" name="command" value="search" />
-																	<input type="text" name="key" value=""
-																		style="width: 110px" placeholder="${speciality }..."
-																		required="">
-																	<button type="submit" class="btn-sm btn-danger"
-																		style="font-size: 17px;">
-																		<i class="fa fa-search"></i>
-																	</button>
-																</form>
-															</div></li>
+														</li>
 														<li class="item492"><a
 															href="#">${cooperation }</a></li>
 														<li class="item467"><a
@@ -1420,7 +1409,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="menu">
 				<ul id="menu">
-					<li><a href="#"><i class="icon-user"></i><span><br>${profile }</span></a>
+					<li><a href="Controller?command=go_to_admin_profile"><i class="icon-user"></i><span><br>${profile }</span></a>
 					</li>
 					<li id="menu-academico"><a href="#"><i
 							class="fa fa-file-text"></i><span>${pages}</span><span
@@ -1435,23 +1424,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#"><i class="fa fa-envelope"></i><span>${mailbox }</span><span
 							class="fa fa-angle-right" style="float: right"></span></a>
 						<ul id="menu-academico-sub">
-							<li id="menu-academico-avaliacoes"><a href="inbox.html">${inbox}</a></li>
+							<li id="menu-academico-avaliacoes"><a href="#">${inbox}</a></li>
 							<li id="menu-academico-boletim"><a
-								href="inbox-details.html">${compose_email }</a></li>
+								href="Controller?command=go_to_send_mail">${compose_email }</a></li>
 						</ul></li>
 					<li><a href="#"><i class="fa fa-cog"></i><span>${system }</span><span
 							class="fa fa-angle-right" style="float: right"></span></a>
 						<ul id="menu-academico-sub">
-							<li id="menu-academico-avaliacoes"><a href="404.html">404</a></li>
-							<li id="menu-academico-boletim"><a href="blank.html">Blank</a></li>
+							<li id="menu-academico-avaliacoes"><a href="error.jsp">404</a></li>
+							<li id="menu-academico-boletim"><a href="#">Blank</a></li>
 						</ul></li>
-					<li><a href="#"><i class="fa fa-shopping-cart"></i><span>${commerce }</span></a>
+					<li><a href="Controller?command=go_to_store"><i class="fa fa-shopping-cart"></i><span>${commerce }</span></a>
 					</li>
 					<li><a href="#"><i class="icon-calendar"></i><span><br>${event}</span></a>
 					</li>
 					<li><a href="#"><i class="icon-ban-circle"></i><span><br>${block }</span></a>
+					<ul id="menu-academico-sub">
+							<li class="menu-academico-boletim">
+								<form action="Controller" method="post">
+									<input type="hidden" name="command" value="block_user">
+									<input type="text" placeholder="Login" name="login_block"
+										style="width: 180px; height: 35px;">
+									<div style="text-align: center;">
+										<input type="submit" value="Block"
+											class="btn btn-danger btn-xs"
+											style="width: 75px; height: 35px;"></input>
+									</div>
+
+								</form>
+							</li>
+						</ul></li>
 					</li>
-					<li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>${information }</span></a></li>
+					<li><a href="Controller?command=show_info"><i class="fa fa-bar-chart"></i><span>${information }</span></a></li>
 					</li>
 				</ul>
 			</div>
