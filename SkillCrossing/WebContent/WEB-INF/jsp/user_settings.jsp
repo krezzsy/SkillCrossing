@@ -447,8 +447,18 @@
 					</a></li>
 
 					<li><a href="javascript:;"> <i class="icon-search"></i> <span
-							class="title">${search }...</span> <span class="arrow "></span>
-					</a></li>
+								class="title">${search}
+									<form action="Controller" method="post">
+										<input type="hidden" name="command" value="search" /> <input
+											type="text" name="key" value="" style="width: 150px"
+											placeholder="${speciality }..." required="">
+										<button type="submit" class="btn-sm btn-danger"
+											style="font-size: 17px;">
+											<i class="fa fa-search"></i>
+										</button>
+									</form>
+							</span> <span class="arrow "><input type="text"></span>
+						</a></li>
 
 					<li class="last "><a href="Controller?command=log_out"> <i
 							class="icon-signout"></i> <span class="title">${signout}</span> <span
